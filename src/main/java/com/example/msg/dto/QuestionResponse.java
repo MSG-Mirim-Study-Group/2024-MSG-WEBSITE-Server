@@ -1,5 +1,12 @@
 package com.example.msg.dto;
 
-// 모든 질문 불러오기 - get
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class QuestionResponse {
+    private String message;
 }
