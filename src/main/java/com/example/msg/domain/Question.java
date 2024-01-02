@@ -1,5 +1,6 @@
 package com.example.msg.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,4 +23,8 @@ public class Question {
     @Column
     private String answer;
 
+    @JsonIgnore
+    public Long getId() {
+        return id;
+    }
 }
