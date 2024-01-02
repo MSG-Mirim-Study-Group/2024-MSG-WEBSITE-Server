@@ -1,0 +1,24 @@
+--초기 테이블 세팅
+--CREATE TABLE support_form (
+--id INT(10) NOT NULL AUTO_INCREMENT,
+--name VARCHAR(20),
+--studentId VARCHAR(20),
+--tel VARCHAR(50),
+--email VARCHAR(50),
+--purpose TEXT,
+--strengths TEXT,
+--failure TEXT,
+--question TEXT,
+--definition TEXT,
+--PRIMARY KEY(id));
+--
+--CREATE TABLE qna (
+--id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--question VARCHAR(255),
+--answer TEXT);
+
+--INSERT INTO 2024msg.support_form(studentId)
+--VALUES ('2023'),
+--       ('2k3jkj');
+
+--DELETE FROM support_form;

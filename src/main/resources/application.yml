@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    # MySQL ?? ??
+    url: jdbc:mysql://localhost:3306/2024msg?useUnicode=true&characterEncoding=euckr
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: gkdms~!1357
+  jpa:
+    database: mysql # MySQL ?? ??
+    show-sql: true # API ?? ? sql?? ??
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: nones
+    defer-datasource-initialization: true
+  security:
+    user:
+      name: user
+      password: 1111
+  sql:
+    init:
+      mode: always # 모든 데이터베이스에 sql 스크립트를 동작시킨다
+
+logging:
+  level:
+    org:
+      springframework: debug
+      springframework.web: debug
