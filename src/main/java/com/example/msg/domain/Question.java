@@ -2,16 +2,14 @@ package com.example.msg.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor // Question() 생성자 대체
 @NoArgsConstructor // 기본 생성자 추가
 @ToString
 @Entity // 엔티티 선언
 @Getter // 게터 추가
+@Setter
 @Table(name = "qna")
 public class Question {
     @Id
@@ -27,4 +25,6 @@ public class Question {
     public Long getId() {
         return id;
     }
+
+
 }
