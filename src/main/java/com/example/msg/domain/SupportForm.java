@@ -1,14 +1,17 @@
 package com.example.msg.domain;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
+import java.time.LocalDateTime;
+
+@AllArgsConstructor // Question() 생성자 대체
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Setter
 @Table(name = "support-form")
 public class SupportForm {
     @Id
@@ -43,27 +46,15 @@ public class SupportForm {
     @Column(name = "definition")
     private String definition;
 
-    @Builder
-    public SupportForm(
-            long id,
-            String name,
-            String studentId,
-            String tel,
-            String email,
-            String purpose,
-            String strengths,
-            String failure,
-            String question,
-            String definition) {
-        this.id = id;
-        this.name = name;
-        this. studentId = studentId;
-        this.tel = tel;
-        this.email = email;
-        this.purpose = purpose;
-        this.strengths = strengths;
-        this.failure = failure;
-        this.question = question;
-        this.definition = definition;
+    @Column(name = "createdAt")
+    @CreatedDate
+    private LocalDateTime createdAt;
+
+    @Column(name = "updatedAt")
+    @LastModifiedDate
+    private LocalDateTime updatedAt;
+
+    public long getId() {
+        return id;
     }
 }
