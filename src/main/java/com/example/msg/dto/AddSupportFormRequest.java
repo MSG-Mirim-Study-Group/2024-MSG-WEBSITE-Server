@@ -2,6 +2,7 @@ package com.example.msg.dto;
 
 // 지원서 등록 - post
 
+import com.example.msg.domain.SupportForm;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,4 +28,19 @@ public class AddSupportFormRequest {
     private String definition;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public SupportForm toEntity() {
+        return SupportForm.builder()
+                .id(id)
+                .name(name)
+                .studentId(studentId)
+                .tel(tel)
+                .email(email)
+                .purpose(purpose)
+                .strengths(strengths)
+                .failure(failure)
+                .question(question)
+                .definition(definition)
+                .build();
+    }
 }
