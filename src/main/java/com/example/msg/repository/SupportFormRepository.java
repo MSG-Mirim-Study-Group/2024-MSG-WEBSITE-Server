@@ -1,4 +1,7 @@
 package com.example.msg.repository;
 
-public class SupportFormRepository {
+import com.example.msg.domain.SupportForm;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SupportFormRepository extends JpaRepository<SupportForm, Long> {
 }
