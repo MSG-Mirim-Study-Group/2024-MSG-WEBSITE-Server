@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Builder
-@Table(name = "support-form")
+@Table(name = "support_form")
 public class SupportForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
