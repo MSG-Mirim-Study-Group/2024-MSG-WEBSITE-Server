@@ -32,13 +32,13 @@ public class SupportForm {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "purpose", length = 1500)
+    @Column(name = "purpose", length = 200000)
     private String purpose;
 
-    @Column(name = "strengths", length = 1500)
+    @Column(name = "strengths", length = 200000)
     private String strengths;
 
-    @Column(name = "failure", length = 1500)
+    @Column(name = "failure", length = 200000)
     private String failure;
 
     @Column(name = "question", length = 1000)
