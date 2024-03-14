@@ -26,3 +26,6 @@ logging:
     org:
       springframework: debug
       springframework.web: debug
+#
+#server:
+#  port: 3000

@@ -32,16 +32,16 @@ public class SupportForm {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "purpose")
+    @Column(name = "purpose", length = 1500)
     private String purpose;
 
-    @Column(name = "strengths")
+    @Column(name = "strengths", length = 1500)
     private String strengths;
 
-    @Column(name = "failure")
+    @Column(name = "failure", length = 1500)
     private String failure;
 
-    @Column(name = "question")
+    @Column(name = "question", length = 1000)
     private String question;
 
     @Column(name = "definition")
